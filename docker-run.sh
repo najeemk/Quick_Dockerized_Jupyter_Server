@@ -1,5 +1,5 @@
 NOTEBOOK=jupyter-scipy
-IMAGE={USERNAME}/jupyter-scipy
+IMAGE={USERNAME}/$NOTEBOOK
 if [ "$1" = "start" ]
 then
         echo "Starting $NOTEBOOK notebook server..."
@@ -19,6 +19,7 @@ then
             --NotebookApp.certfile=/etc/letsencrypt/ssl/fullchain.pem \
             --NotebookApp.keyfile=/etc/letsencrypt/ssl/privkey.pem \
             --NotebookApp.port=8888 \
+            --NotebookApp.password='{INSERT HASHED PW HERE}' \
             --NotebookApp.quit_button=False
         echo "Server is initialized!"
 elif [ "$1" = "stop" ]
