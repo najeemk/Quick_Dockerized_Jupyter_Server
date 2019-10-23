@@ -10,6 +10,6 @@ Note: By default, this is configured to work with the *jupyter/scipy-notebook* D
 4. In **Dockerfile**, add your email and name in the appropriate locations
 5. Build the Docker image by running `docker build -t {USERNAME}/jupyter-scipy .`
 6. In **docker-run.sh**, replace the volumes with the locations of your SSL keys, as well as the location of your files for the container
-7. In **docker-run.sh**, replace the `{USERNAME}/jupyter-scipy` with the same name/tag that you used for the "docker build" command
+7. In **docker-run.sh**, replace the `{USERNAME}` with the same name that you used for the "docker build" command
 8. In **docker-run.sh**, replace the `8888:8888` and `--NotebookApp.port=8888` with whatever port that you previously configured
 9. Execute `docker-run.sh init` to start the server
